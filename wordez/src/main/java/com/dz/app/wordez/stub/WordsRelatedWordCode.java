@@ -1,0 +1,19 @@
+package com.dz.app.wordez.stub;
+
+public enum WordsRelatedWordCode {
+    POPULAR_NOUNS,
+    POPULAR_ADJECTIVES,
+    SYNONYMS,
+    TRIGGERS,
+    ANTONYMS,
+    KIND_OF,
+    MORE_GENERAL_THAN,
+    COMPRISES,
+    PART_OF,
+    FREQUENT_SUCCESSORS,
+    FREQUENT_PREDECESSORS,
+    RHYMES,
+    APPROXIMATE_RHYMES,
+    HOMOPHONES_SOUNDS_ALIKE_WORDS,
+    CONSONANT_MATCH
+}

@@ -1,0 +1,48 @@
+# server config
+server:
+  port: 9000
+  servlet:
+    context-path: /identity
+
+spring:
+  # app config
+  application:
+    name: identity-service
+  # db config
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wezdb
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  # jpa config
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+# spring cloud config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2000/eureka
+
+application:
+  security:
+    jwt:
+      secret-key: 2b0c542f8cc0e6bbbbe2307f102fc89e1d3f727177be6a93538f7216807a18d9
+      expiration: 86400000 # 1 day
+      refresh-token:
+        expiration: 604800000 # 7 days
+
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

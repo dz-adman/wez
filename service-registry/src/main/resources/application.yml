@@ -1,0 +1,23 @@
+# server config
+server:
+  port: 2000
+
+spring:
+  # app config
+  application:
+    name: service-registry
+
+# spring cloud config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2000/eureka
+    registerWithEureka: false
+    fetchRegistry: false
+
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

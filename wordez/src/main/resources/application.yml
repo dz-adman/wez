@@ -1,0 +1,37 @@
+# server config
+server:
+  port: 8080
+
+spring:
+  # app config
+  application:
+    name: wordez-service
+  # db config
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/wezdb
+    username: admin
+    password: admin
+  # jpa config
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+# spring cloud config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2000/eureka
+
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

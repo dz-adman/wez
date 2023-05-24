@@ -1,0 +1,23 @@
+# server config
+server:
+  port: 8000
+
+spring:
+  # app config
+  application:
+    name: gateway-service
+
+# spring cloud config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2000/eureka
+    registerWithEureka: true
+    fetchRegistry: true
+
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
