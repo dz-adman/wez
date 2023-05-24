@@ -7,7 +7,7 @@ service-registry for all the microservices in the project.
 
 ## api-gateway
 #### Spring Boot 3, Spring-Cloud-Gateway, Spring Webflux
-This microservice is responsible for application level routing and filter requests for athentication and authorization from identity-service (uses declarative client).
+This microservice is responsible for application level routing and filter requests for authentication and authorization from identity-service (uses declarative client).
 
 ## identity-service
 #### Spring Boot 3, Spring Security, JWT, PostgreSQL
